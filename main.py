@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, send_file
 from scrapper import get_jobs
 from save import save_to_file
 
-app = Flask("SuperScrapper")
+app = Flask("SuperScraper")
 
 # database to store jobs
 # should be outside the route
@@ -63,5 +63,5 @@ def export():
 # def potato(username):
 #     return f"Hello {username} how are you doing? "
 
-
-app.run(host="0.0.0.0")
+if __name__ == "__main__":
+    app.run()
